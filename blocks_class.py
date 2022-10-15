@@ -5,7 +5,6 @@ class Blocks():
     def __init__(self):
         self.blocks = []
         self.create_blocks()
-        self.x = 0
 
     def create_blocks(self):
         for j in range(1, 5):
@@ -22,8 +21,6 @@ class Blocks():
     def breaking(self, n):
         if n.c == 'DarkOliveGreen1':
             n.hideturtle()
-            self.x +=1
-            print(self.x)
             self.blocks.pop(self.blocks.index(n))
         else:
             j = int(n.c[-1]) -1
